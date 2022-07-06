@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+  --black-backgorund-color: #181719;
+
+
+  --ff-1: 'Lora', serif;
+  --ff-2: 'Montserrat', sans-serif;
+  --ff-3: 'Crimson Pro', serif;
+}
+
+body {
+  background-color: var(--black-backgorund-color);
+  color: #ffffff;
+  font-family: var(--ff-2);
+  height: 100wh;
+}
