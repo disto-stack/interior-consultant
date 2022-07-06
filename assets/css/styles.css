@@ -16,9 +16,35 @@ body {
   height: 100wh;
 }
 
+/** Header styles **/
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.app-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  gap: 20px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black-backgorund-color);
+}
+
+.hidden-menu {
+  display: none;
+}
+
 .mobile-menu {
   position: relative;
-  width: 29px;
+  width: 30px;
 }
 
 .mobile-menu span {
@@ -27,9 +53,9 @@ body {
   height: 3px;
   display: block;
   background-color: #ffffff;
-  margin: 4px 0;
-  transition: transform 0.2s ease;
-  transition: opacity 30ms ease-in-out;
+  margin: 5px 0;
+  transition: all 200ms ease;
+  border-radius: 50px;
 }
 
 .active-mobile-menu span:first-child {
@@ -46,4 +72,25 @@ body {
   position: absolute;
   transform: rotate(45deg);
   top: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+  .app-header {
+    padding: 40px 60px;
+  }
+
+  .app-navigation {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
 }
