@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
 
 :root {
-  --black-backgorund-color: #181719;
+  --black-background-color: #181719;
 
   --ff-1: 'Lora', serif;
   --ff-2: 'Montserrat', sans-serif;
@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: var(--black-backgorund-color);
+  background-color: var(--black-background-color);
   color: #ffffff;
   font-family: var(--ff-2);
   font-size: 1rem;
@@ -24,7 +24,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px 0;
 }
 
 .logo {
@@ -48,7 +50,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--black-backgorund-color);
+  background-color: var(--black-background-color);
+  z-index: 1;
 }
 
 .app-navigation a {
@@ -83,6 +86,7 @@ body {
   position: relative;
   width: 30px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .mobile-menu span {
@@ -114,7 +118,8 @@ body {
 
 @media screen and (min-width: 1024px) {
   .app-header {
-    padding: 40px 60px;
+    width: 80%;
+    padding: 30px 0;
   }
 
   .app-navigation {
@@ -123,9 +128,10 @@ body {
     flex-direction: row;
     width: inherit;
     height: inherit;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 80px;
+    width: 50%;
   }
 
   .mobile-menu {
@@ -135,7 +141,7 @@ body {
 
 /** Main styles **/
 
-main {
+.app-main {
   width: 90%;
   margin: 0 auto;
 }
@@ -166,4 +172,72 @@ main {
 
 .read-more-button:hover {
   opacity: .6;
+}
+
+.web-image {
+  position: relative;
+  margin: 25px 0;
+  padding-bottom: 90px;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.designer-card {
+  background-color: var(--black-background-color);
+  width: 80%;
+  padding: 25px 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  box-shadow: var(--black-background-color);
+}
+
+.designer-card-header {
+  display: flex;
+  align-items: center;
+}
+
+.designer-card-photo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.designer-card-photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.designer-info {
+  font-weight: 500;
+}
+
+.designer-info h4 {
+  font-size: .8rem;
+  color: #828282;
+}
+
+.designer-card-body {
+  margin-top: 22px;
+  font-size: 1.2rem;
+  font-family: var(--ff-1);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+  .app-main {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .web-info {
+    margin-right: 200px;
+  }
+
+  .designer-card {
+    width: 40%;
+  }
 }
