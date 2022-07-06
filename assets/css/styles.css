@@ -130,7 +130,6 @@ body {
     height: inherit;
     justify-content: space-between;
     align-items: center;
-    gap: 80px;
     width: 50%;
   }
 
@@ -234,10 +233,22 @@ body {
   }
 
   .web-info {
-    margin-right: 200px;
+    padding-right: 18rem;
   }
 
   .designer-card {
     width: 40%;
   }
+}
+
+/** Footer **/
+.app-footer {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #A9A9A9;
+}
+
+.app-footer a {
+  font-weight: 700;
+  color: #A9A9A9;
 }
